@@ -1,0 +1,123 @@
+<head>
+  <style>
+    /* 黒いヘッダーのスタイル */
+    .site-header {
+      background-color: #222; /* または black, #000 などお好みの黒色 */
+      color: #fff; /* ヘッダー内の文字色を白に */
+      /* padding: 1rem 0; */
+      padding: 1rem; /* 左右にもpaddingを追加 */
+      margin-bottom: 2rem;
+    }
+
+    .site-header a {
+      color: #fff; /* ヘッダー内のリンク色を白に */
+      text-decoration: none; /* リンクの下線を削除 */
+    }
+
+    .site-header a:hover {
+      color: #ccc; /* ホバー時のリンク色を少し薄いグレーに */
+    }
+
+    .header-sticky {
+      /* max-width: 1200px; */
+      width: 100%; /* ヘッダーの幅を常に画面幅に合わせる */
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* align-items: flex-start; 縦方向の配置を上揃えに */
+      /* flex-wrap: wrap; 折り返しを有効にする */
+      padding: 0 1rem;
+    }
+
+    .header-about h1 {
+      margin-bottom: 0; /* タイトルの下の余白を調整 */
+    }
+
+    .header-nav .trigger {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-nav-item {
+      margin-left: 1rem;
+    }
+
+    .header-nav-item.active {
+      font-weight: bold;
+    }
+    @media screen and (max-width: 767px) {
+      .header-sticky {
+        padding: 0 0.5rem; /* 左右のpaddingをさらに小さく調整 */
+      }
+      .header-nav-item {
+        margin-left: 0.5rem; /* ナビゲーションアイテムの間隔を調整 */
+      }
+    }
+  </style>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    {% if page.title == "Home" %}
+      {{ site.title }} &middot; {{ site.tagline }}
+    {% else %}
+      {{ page.title }} &middot; {{ site.title }}
+    {% endif %}
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/poole.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/syntax.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/hyde.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/timeline.css">
+  <link rel="stylesheet" href="{{ '/public/css/timeline.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/poole.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/syntax.css">
+
+<!-- 以下，locakてすと -->
+  <link rel="stylesheet" href="{{ 'public/css/poole.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ 'public/css/syntax.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ 'public/css/hyde.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ 'public/css/hamburger.css' | relative_url }}">
+
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="{{ site.baseurl }}public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      const darkModeIcon = document.getElementById('darkModeIcon');
+      const body = document.body;
+      const darkModeKey = 'darkModeEnabled';
+
+      // ローカルストレージからテーマの状態を取得し適用
+      const isDarkMode = localStorage.getItem(darkModeKey) === 'true';
+      if (isDarkMode) {
+        body.classList.add('dark-mode');
+        darkModeIcon.textContent = '☀️'; // ライトモードアイコン
+      }
+
+      // ボタンクリック時の処理
+      darkModeToggle.addEventListener('click', function() {
+        body.classList.toggle('dark-mode');
+        const isDarkModeActive = body.classList.contains('dark-mode');
+        localStorage.setItem(darkModeKey, isDarkModeActive); // テーマの状態を保存
+
+        // アイコンを切り替え
+        darkModeIcon.textContent = isDarkModeActive ? '☀️' : '🌙';
+      });
+    });
+  </script>
+</head>

@@ -1,0 +1,134 @@
+.timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding: 0;
+    /* border-left: 2px solid #00c896; */
+  }
+  
+  .timeline-item {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .timeline-icon {
+    position: absolute;
+    left: -1.4rem;
+    top: 0;
+    background: #0f172a;
+    color: #00c896;
+    font-size: 1.2rem;
+    border: 2px solid #00c896;
+    border-radius: 50%;
+    width: 1.8rem;
+    height: 1.8rem;
+    text-align: center;
+    line-height: 1.6rem;
+  }
+  
+  .timeline-content {
+    /* background-color: #1e293b; */
+    background-color: antiquewhite;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+    /* color: #fff; */
+    /* color: #f0f0f0; */
+    color:black;
+  }
+  
+
+
+/* Dark Mode Styles for Timeline */
+body.dark-mode .timeline {
+  /* border-left-color: #38a169; /* より暗い緑 */
+}
+
+body.dark-mode .timeline-icon {
+  background: #1a202c; /* より濃い背景 */
+  color: #38a169; /* より暗い緑 */
+  border-color: #38a169; /* より暗い緑 */
+}
+
+body.dark-mode .timeline-content {
+  background-color: #2d3748; /* 少し濃いグレー */
+  color: #cbd5e0; /* 明るいグレー */
+  /* box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* より濃い影 */
+}
+
+body.dark-mode .timeline-content p {
+  color: #f0f0f0;
+}
+
+body.dark-mode .timeline-content h3 { /* 修正箇所 */
+  color: white; /* 明るいグレー */
+}
+
+body.dark-mode .timeline-content h2 { /* こちらも同様に修正 */
+  color: white; /* 明るいグレー */
+}
+
+body.dark-mode .timeline-content a {
+  color: #a7d9ed; /* より明るい青 */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #1e293b;
+  color: #f0f0f0;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode strong {
+  color: #f0f0f0;
+}
+
+body.dark-mode a {
+  color: #a7d9ed; /* より明るい青 */
+}
+
+body.dark-mode pre,
+body.dark-mode code {
+  background-color: #2d3748; /* 少し濃いグレー */
+  color: #cbd5e0; /* 明るいグレー */
+}
+
+body.dark-mode hr {
+  border-top-color: #4a5568;
+  border-bottom-color: #1a202c;
+}
+
+body.dark-mode blockquote {
+  color: #a0aec0;
+  border-left-color: #4a5568;
+}
+
+body.dark-mode .message {
+  background-color: #2d3748;
+  color: #cbd5e0;
+}
+
+body.dark-mode table,
+body.dark-mode td,
+body.dark-mode th {
+  border-color: #4a5568;
+}
+
+body.dark-mode tbody tr:nth-child(odd) td,
+body.dark-mode tbody tr:nth-child(odd) th {
+  background-color: #283344;
+}
+
+body.dark-mode .pagination-item {
+  border-color: #4a5568;
+  color: #cbd5e0;
+}
+
+body.dark-mode a.pagination-item:hover {
+  background-color: #374151;
+}
